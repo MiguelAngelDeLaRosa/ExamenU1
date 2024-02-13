@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".MainActivity">
+
+    <!-- Sección para ingresar grados Celsius -->
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Convertidor de grados"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/etC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Ingrese grados Celsius"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/titleTextView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/C"
+        android:layout_width="20dp"
+        android:layout_height="27dp"
+        android:layout_gravity="center"
+        android:text="C"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintStart_toEndOf="@id/etC"
+        />
+
+    <EditText
+        android:id="@+id/etF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:hint="Ingrese grados Fahrenheit"
+        android:inputType="numberDecimal"
+        app:layout_constraintTop_toBottomOf="@+id/etC"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/F"
+        android:layout_width="23dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center"
+        android:text="F"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/C"
+        app:layout_constraintStart_toEndOf="@id/etF"
+        />
+
+    <Button
+        android:id="@+id/btnGC"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="C"
+        app:layout_constraintTop_toBottomOf="@+id/etF"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnGF"
+        />
+
+    <Button
+        android:id="@+id/btnGF"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="F"
+        app:layout_constraintTop_toBottomOf="@+id/etF"
+        app:layout_constraintStart_toEndOf="@+id/btnGC"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
